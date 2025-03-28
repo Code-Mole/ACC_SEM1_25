@@ -1,0 +1,145 @@
+:root {
+  --darkblue-color: hsl(209, 23%, 22%);
+  --darkblue-bgcolor: hsl(207, 26%, 17%);
+  --darkModeText-color: hsl(0, 0%, 100%);
+  --lightModeText-color: hsl(200, 15%, 8%);
+  --lightModeInput-color: hsl(0, 0%, 52%);
+  --lightMode-bgcolor: hsl(0, 0%, 98%);
+
+  --homeItem-font: 14px;
+  --detailedpageItem-font: 16px;
+
+  --font-family: "Nunito", sans-serif;
+
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--lightMode-bgcolor);
+  color: var(--lightModeText-color);
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-family);
+}
+
+.top_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3rem;
+  height: 60px;
+  width: 100%;
+  color: var(--lightModeText-color);
+  position: fixed;
+  top: 0;
+  box-shadow: var(--box-shadow);
+  z-index: 100;
+}
+
+.top_section button {
+  position: relative;
+  right: 7rem;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+}
+
+
+.middle_section,
+.bottom_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 3rem;
+  margin-top: 100px;
+}
+
+.middle_section div:first-child {
+  width: 20rem;
+  padding: 7px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+}
+.middle_section div:last-child {
+  width: 9rem;
+  padding: 7px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 4.5rem;
+}
+.middle_section div span {
+  margin-left: 10px;
+}
+.middle_section div input {
+  border: none;
+  margin-left: 5px;
+}
+
+.middle_section div input::placeholder {
+  font-weight: 100;
+  font-size: 8px;
+  color: var(--lightModeInput-color);
+  padding-left: 10px;
+}
+.middle_section div input:focus {
+  border: none;
+  outline: none;
+}
+
+.middle_section div select {
+  border: none;
+}
+.middle_section div select:active,
+.middle_section div select:focus {
+  border: none;
+  outline: none;
+}
+.bottom_section {
+  margin-top: 40px;
+}
+
+/*  COUNTRY COMPONENT STYLES */
+.card_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.country_card {
+  box-shadow: var(--box-shadow);
+  width: 22rem;
+  color: var(--lightModeText-color);
+  border-radius: 5px;
+  font-size: 10px;
+  margin: 1rem ;
+}
+.country_card img {
+  width: 100%;
+  height: 12rem;
+}
+.country_info{
+  margin: 10px 40px 4rem;
+}
+.country_info h3 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.country_info p {
+  font-weight: 800;
+  font-size: 15px;
+  }
+.country_info p span {
+  font-weight: 100;
+  }
