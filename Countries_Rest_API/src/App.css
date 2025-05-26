@@ -15,18 +15,23 @@
   --bg-color: hsl(207, 26%, 17%);
   --input-color: hsl(209, 23%, 22%);
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
+  overflow-x: hidden;
   background-color: var(--bg-color);
   color: var(--text-color);
-  margin: 0;
   display: flex;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 100vw;
   font-family: var(--font-family);
 }
 
 .top_section {
+  background-color: var(--bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,25 +47,24 @@ body {
 
 .top_section button {
   position: relative;
-  right: 8rem;
+  right: 4rem;
   background-color: transparent;
   color: var(--text-color);
   border: none;
   font-size: 14px;
 }
 
-.middle_section,
-.bottom_section {
+.middle_section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
   margin-top: 100px;
 }
 
 .middle_section div:first-child {
-  width: 20rem;
+  width: 23rem;
   padding: 7px;
   font-size: 17px;
   margin-left: 18px;
@@ -70,8 +74,8 @@ body {
   display: flex;
 }
 .middle_section div:last-child {
-  width: 10rem;
-  padding: 7px;
+  width: 12rem;
+  padding: 8px;
   font-size: 17px;
   border: none;
   border-radius: 5px;
@@ -82,13 +86,12 @@ body {
   position: absolute;
   right: 3.5rem;
 }
-.middle_section div {
-  /* background-color: var(--input-color); */
-}
+
 .middle_section div span {
   margin-left: 10px;
 }
 .middle_section div input {
+  width: 100%;
   border: none;
   margin-left: 5px;
   background-color: transparent;
@@ -96,8 +99,7 @@ body {
 
 .middle_section div input::placeholder {
   font-weight: 100;
-  font-size: 8px;
-  /* color: var(--input-color); */
+  font-size: 12px;
   padding-left: 10px;
 }
 .middle_section div input:focus {
@@ -119,18 +121,20 @@ body {
   background-color: var(--input-color);
 }
 .bottom_section {
+  overflow-y: hidden;
   margin-top: 40px;
+  padding-left: 3rem;
 }
 
 /*  COUNTRY COMPONENT STYLES */
 .card_body {
+  overflow-x: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
 }
 .country_card {
-  /* background-color: var(--input-color); */
   box-shadow: var(--box-shadow);
   width: 23rem;
   color: var(--text-color);
@@ -160,52 +164,150 @@ body {
 
 /* DETAITED COUNTRY STYLES */
 
-
-
-.back_icon_container{
+.back_icon_container {
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: var(--box-shadow);
   width: 5rem;
-  padding:5px;
+  padding: 5px;
   color: var(--text-color);
   border-radius: 5px;
   font-size: 15px;
-  margin: 2rem 4rem ;
+  margin: 2rem 4rem;
   cursor: pointer;
   position: relative;
   top: 5rem;
 }
-.sub_container img{
+.sub_container img {
   width: 40rem;
   height: 30rem;
 }
-.country_info_container{
+.country_info_container {
   display: grid;
-  grid-template-columns: 1fr 1fr ;
+  grid-template-columns: 1fr 1fr;
   width: 92vw;
   height: 60vh;
   position: relative;
   top: 7rem;
   margin-left: 4rem;
 }
-.country-info-sub-both-container{
+.country-info-sub-both-container {
   display: flex;
   gap: 10rem;
 }
-.border_btn{
+.border_btn {
   position: relative;
   left: 9rem;
   bottom: 1.3rem;
   box-shadow: var(--box-shadow);
   border: 1px solid var(--text-color);
-  padding:3px 5px;
-  border-radius:  5px;
+  padding: 3px 5px;
+  border-radius: 5px;
   font-size: 10px;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   cursor: pointer;
 }
-#icon{
+#icon {
   font-size: 25px;
 }
+
+/* SMALLER SCREENS STYLES */
+
+@media (max-width: 1280px) {
+  .top_section {
+    padding-left: 2rem;
+  }
+  .top_section button {
+    right: 9rem;
+  }
+  .middle_section {
+    padding-left: 1rem;
+  }
+  .middle_section div:last-child {
+    margin-right: 3rem;
+  }
+  .bottom_section {
+    overflow-x: hidden;
+    padding-left: 1rem;
+  }
+  .country_card {
+    width: 24rem;
+  }
+}
+@media (max-width: 1024px) {
+  .card_body {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .country_card {
+    width: 26rem;
+  }
+}
+@media (max-width: 992px) {
+  .top_section button {
+    right: 5rem;
+  }
+  .middle_section div:last-child {
+    right: 1rem;
+  }
+  .card_body {
+    grid-template-columns: 1fr 1fr;
+  }
+  .country_card {
+    width: 33rem;
+  }
+}
+@media (max-width: 768px) {
+  .top_section {
+    padding-left: 1.5rem;
+  }
+  .top_section h2 {
+    font-size: 14px;
+  }
+  .top_section button {
+    right: 8rem;
+  }
+  .middle_section {
+    padding-left: 0;
+  }
+  .middle_section div:first-child {
+    width: 40rem;
+  }
+  .middle_section div:last-child {
+    width: 25rem;
+    left: 1.5rem;
+    margin-top: 9rem;
+  }
+  .bottom_section {
+    padding-left: 2rem;
+    margin-top: 7rem;
+  }
+  .card_body {
+    grid-template-columns: 1fr;
+  }
+  .country_card {
+    width: 54rem;
+  }
+}
+@media (max-width: 500px) {
+  .top_section {
+    padding-left: 1.5rem;
+  }
+  .top_section h2 {
+    font-size: 14px;
+  }
+
+  .middle_section div:last-child {
+    width: 15rem;
+    left: 1.5rem;
+    margin-top: 7rem;
+  }
+  .bottom_section {
+    padding-left: 2rem;
+    margin-top: 5rem;
+  }
+  .country_card {
+    width: 29rem;
+  }
+}
+
