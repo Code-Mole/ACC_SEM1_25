@@ -160,8 +160,7 @@ body {
 
 /* DETAITED COUNTRY STYLES */
 
-.container {
-}
+
 
 .back_icon_container{
   display: flex;
@@ -194,6 +193,18 @@ body {
 .country-info-sub-both-container{
   display: flex;
   gap: 10rem;
+}
+.border_btn{
+  position: relative;
+  left: 9rem;
+  bottom: 1.3rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--text-color);
+  padding:3px 5px;
+  border-radius:  5px;
+  font-size: 10px;
+  margin-right: .5rem;
+  cursor: pointer;
 }
 #icon{
   font-size: 25px;

@@ -31,7 +31,10 @@ function CountryDetailed() {
   return (
     <div className="container">
       <Header />
-      <div className="back_icon_container">
+      <div
+        onClick={() => window.history.back()}
+        className="back_icon_container"
+      >
         <IoIosArrowRoundBack id="icon" /> <span>Back</span>
       </div>
 
@@ -73,27 +76,26 @@ function CountryDetailed() {
               <p>
                 Languages: <span>{languageList}</span>
               </p>
-              
             </div>
           </div>
           <div className="country_border_info">
-                <p>
-                  Border Countries:{" "}
-                  <span>
-                    <div className="border_buttons">
-                      {borderCountries?.length ? (
-                        borderCountries.map((borderName) => (
-                          <button key={borderName} className="border_btn">
-                            {borderName}
-                          </button>
-                        ))
-                      ) : (
-                        <span>No border countries</span>
-                      )}
-                    </div>
-                  </span>
-                </p>
-              </div>
+            <p>
+              Border Countries:{" "}
+              <span>
+                <div className="border_buttons">
+                  {borderCountries?.length ? (
+                    borderCountries.map((borderName) => (
+                      <button key={borderName} className="border_btn">
+                        {borderName}
+                      </button>
+                    ))
+                  ) : (
+                    <span>No border countries</span>
+                  )}
+                </div>
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
