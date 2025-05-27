@@ -325,7 +325,7 @@ body {
     margin-left: 2rem;
   }
   .sub_container img {
-    width: 26rem;
+    width: 25rem;
     margin-bottom: 4rem;
   }
   .back_icon_container{
@@ -343,7 +343,7 @@ body {
   }
   .border_buttons{
     position: absolute;
-    left: -12rem;
+    left: -9rem;
     padding: 2.5rem;
   }
 }
